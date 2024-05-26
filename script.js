@@ -122,11 +122,11 @@ const product = [
     },
 ];
 
-const haveImgProduct = product.filter((item) => {
-    if (item.photos === undefined) return false;
-    return true;
-});
-console.log(haveImgProduct);
+const productsFiltered = product.filter((item) => { 
+    if (item.photos !== undefined && item['photos'].length > 0) return true; 
+    else return false; 
+});  
+console.log(productsFiltered); 
 
 product.sort(function (a, b) {
     if (a.price > b.price) {
